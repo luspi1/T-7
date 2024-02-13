@@ -1,0 +1,210 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 340px;
+  overflow-x: hidden;
+  @include montserrat-regular;
+  font-size: 15px;
+  line-height: 25px;
+  background-color: $main-bg;
+  color: $black;
+  position: relative;
+}
+
+main {
+  padding-top: 140px;
+  min-height: calc(100vh - 285px);
+
+  @media (max-width: 768px) {
+    padding-top: 104px;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+svg {
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+  resize: none;
+}
+
+h1 {
+  @include montserrat-semibold;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.air-datepicker-body--day-name {
+  color: #817D8C;
+  @include montserrat-medium;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: lowercase;
+}
+
+.air-datepicker-cell.-day- {
+  @include montserrat-medium;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.air-datepicker-global-container {
+  z-index: 900;
+}
+
+.date-custom-container {
+  z-index: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
+.input_disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn_disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.site-container {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: 1250px;
+  padding: 0 15px;
+}
+
+
+.modal {
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  left: 50%;
+  top: 50%;
+  width: 602px;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  border: 1px solid #93B5C5;
+  border-radius: 5px;
+  padding: 44px 52px 35px 36px;
+  box-shadow: 0 8px 15px rgba(51, 115, 144, 0.3);
+  transition: all .2s;
+  opacity: 0;
+  visibility: hidden;
+
+  &._active {
+    opacity: 1;
+    z-index: 999;
+    visibility: visible;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  z-index: -1;
+
+  &._active {
+    z-index: 998;
+    visibility: visible;
+  }
+}
+
+
+.trim-string {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.date-wrapper {
+  position: relative;
+
+}

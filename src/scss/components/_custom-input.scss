@@ -1,0 +1,43 @@
+.custom-input {
+  position: relative;
+  display: inline-block;
+
+  input {
+    color: #000000;
+    font-size: 17px;
+    @include montserrat-regular;
+    background-color: #fff;
+    padding: 20px 13px 6px 13px;
+    border: none;
+    outline: none;
+  }
+
+  svg {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  label {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #808994;
+    font-size: 13px;
+    @include montserrat-regular;
+    transition: all .3s;
+    pointer-events: none;
+  }
+
+  &._active {
+
+    label {
+      transform: none;
+      top: -1px;
+    }
+  }
+
+}
