@@ -12,10 +12,10 @@ body {
   margin: 0;
   min-width: 340px;
   overflow-x: hidden;
-  @include montserrat-regular;
+  @include opensans-regular;
   font-size: 15px;
   line-height: 25px;
-  background-color: $main-bg;
+  background-color: $white;
   color: $black;
   position: relative;
 }
@@ -96,7 +96,7 @@ textarea {
 }
 
 h1 {
-  @include montserrat-semibold;
+  @include opensans-bold;
   font-size: 25px;
   line-height: 30px;
 }
@@ -107,14 +107,14 @@ h1 {
 
 .air-datepicker-body--day-name {
   color: #817D8C;
-  @include montserrat-medium;
+  @include opensans-medium;
   font-size: 12px;
   line-height: 15px;
   text-transform: lowercase;
 }
 
 .air-datepicker-cell.-day- {
-  @include montserrat-medium;
+  @include opensans-medium;
   font-size: 16px;
   line-height: 20px;
   color: #000000;

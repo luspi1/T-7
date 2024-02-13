@@ -53,7 +53,7 @@
     z-index: 1;
     color: #808994;
     font-size: 13px;
-    @include montserrat-regular;
+    @include opensans-regular;
   }
 
   .choices__list--dropdown .choices__placeholder {
@@ -63,7 +63,7 @@
   .choices__placeholder {
     color: #000000;
     font-size: 17px;
-    @include montserrat-regular;
+    @include opensans-regular;
     opacity: 1;
   }
 
@@ -110,7 +110,7 @@
   .choices__item--selectable {
     color: #000;
     font-size: 17px;
-    @include montserrat-regular;
+    @include opensans-regular;
   }
 
   .choices__list--dropdown, .choices__list[aria-expanded] {
@@ -130,7 +130,7 @@
   .choices__list[aria-expanded] .choices__item {
     padding: 5px 5px 5px 26px;
     font-size: 17px;
-    @include montserrat-regular;
+    @include opensans-regular;
     margin-bottom: 5px;
   }
 
