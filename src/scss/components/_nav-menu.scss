@@ -1,0 +1,44 @@
+.nav-menu {
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid #D0D5DF;
+  border-radius: 5px;
+  max-width: max-content;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
+
+  li {
+    &:not(:first-child) {
+      border-left: 1px solid #D0D5DF;
+    }
+    @media (max-width: 550px) {
+      &:not(:first-child) {
+        border-left: none;
+        border-top: 1px solid #D0D5DF;
+      }
+    }
+
+    a {
+      padding: 7px 15px;
+      display: inline-block;
+    }
+
+    &._active {
+      background: #2F65F6;
+      border-radius: 5px;
+      a {
+        color: #ffffff;
+      }
+      & + li {
+        border: none;
+      }
+    }
+
+    a {
+      color: #000000;
+    }
+
+  }
+}

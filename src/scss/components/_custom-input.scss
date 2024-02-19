@@ -2,15 +2,31 @@
   position: relative;
   display: inline-block;
 
-  input {
+  input, select {
     color: #000000;
-    font-size: 17px;
+    font-size: 15px;
+    height: 40px;
+    width: 100%;
     @include opensans-regular;
     background-color: #fff;
-    padding: 20px 13px 6px 13px;
-    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0 30px 0 10px;
+    border-radius: 5px;
+    border: 1px solid #999999;
     outline: none;
+    &::placeholder {
+      color: #727272;
+    }
   }
+
+  select {
+    color: #727272;
+    option {
+      color: #000000;
+    }
+  }
+
 
   svg {
     position: absolute;
@@ -26,18 +42,11 @@
     top: 50%;
     transform: translateY(-50%);
     color: #808994;
-    font-size: 13px;
+    font-size: 15px;
     @include opensans-regular;
     transition: all .3s;
     pointer-events: none;
   }
 
-  &._active {
-
-    label {
-      transform: none;
-      top: -1px;
-    }
-  }
 
 }

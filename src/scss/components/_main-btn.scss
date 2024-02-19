@@ -1,0 +1,13 @@
+.main-btn {
+  @include opensans-semi;
+  padding: 11px 12px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid #999999;
+
+  &._blue {
+    color: #ffffff;
+    background-color: #2F65F6;
+    border: none;
+  }
+}

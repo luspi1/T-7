@@ -3,13 +3,15 @@
 @import "settings";
 
 //Страницы
-@import "pages/home";
+@import "pages/tasks-diagram";
 
 //Компоненты
 @import "./components/main-menu";
-@import "./components/custom-select";
 @import "./components/custom-input";
 @import "./components/main-checkbox";
+@import "./components/nav-menu";
+@import "./components/nav-submenu";
+@import "./components/main-btn";
 
 
 
