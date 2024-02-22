@@ -1,0 +1,18 @@
+{
+  "jsxSingleQuote": true,
+  "arrowParens": "always",
+  "semi": false,
+  "singleQuote": false,
+  "endOfLine": "crlf",
+  "max-len": ["error", 140, 2],
+  "tabWidth": 2,
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "singleQuote": true
+      }
+    }
+  ]
+}

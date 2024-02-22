@@ -1,5 +1,6 @@
 .gant-diagram {
   overflow-x: auto;
+  overflow-y: hidden;
 
   &__row {
     min-width: 1500px;
@@ -10,6 +11,7 @@
 
   &__cell {
     font-size: 13px;
+
     &:not(:last-child) {
       border-right: 1px dotted #868585;
     }
@@ -28,11 +30,45 @@
 
   &__controller {
     margin-bottom: 10px;
+
     .gant-diagram__cell {
       height: 45px;
 
+      &._active {
+        span {
+          font-weight: 700;
+        }
+
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 0;
+          width: 1px;
+          background-color: rgba(#FF0000, 0.9);
+          transform: translateX(-50%);
+          height: 100vh;
+          opacity: 0.9;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: rgba(#FF0000, 0.9);
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+        }
+      }
+
       &:not(:first-child) {
-        min-width: 100px;
+        width: 100px;
+        max-width: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -47,6 +83,7 @@
     outline-offset: 1px;
     border-radius: 5px;
     background: #F6F6F6;
+
     a {
       display: flex;
       align-items: center;
@@ -55,6 +92,7 @@
       font-size: 13px;
       padding: 0 15px;
       color: #000000;
+
       &._active {
         outline: 1px solid #4E4E4E;
         border-radius: 5px;
@@ -74,13 +112,53 @@
     align-items: center;
     font-size: 18px;
     font-weight: 700;
+
     svg:first-child {
       margin-right: 10px;
     }
+
     span {
       font-weight: 500;
       margin-left: 5px;
       margin-right: 20px;
+      pointer-events: none;
     }
   }
+
+
+  &__block {
+    &._collapsed {
+      .gant-diagram__trigger {
+        .arrow-svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      .gant-diagram__table-wrapper {
+        display: none;
+      }
+    }
+  }
+
+  &__table {
+    margin-top: 5px;
+
+    .gant-diagram__cell {
+      font-size: 15px;
+      width: 100px;
+    }
+
+    .gant-diagram__cell:first-child {
+      width: 400px;
+      justify-content: flex-start;
+
+      a {
+        color: #2F65F6;
+        font-size: 15px;
+        font-weight: 700;
+        margin-left: 10px;
+      }
+    }
+  }
+
 }

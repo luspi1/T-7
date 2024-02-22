@@ -1,75 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru" class="page">
-@include('partials/head.html', { 'title': 'Главная' })
+  @include('partials/head.html', { 'title': 'Главная' })
 
-<body class="page__body home-page">
-<div class="site-container">
-  <header class="header">
-    @include('partials/main-menu.html')
-  </header>
+  <body class="page__body home-page">
+    <div class="site-container">
+      <header class="header">@include('partials/main-menu.html')</header>
 
-  <main class="main tasks-performers-days__main">
-    <div class="container">
-      <div class="main-nav-container">
-        <ul class="nav-menu">
-          <li>
-            <a href="#">
-              Проекты
-            </a>
-          </li>
-          <li>
-            <a href="tasks-performers-days.html">
-              Задачи
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Отчеты
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Уведомления
-            </a>
-          </li>
-        </ul>
+      <main class="main tasks-performers-days__main">
+        <div class="container">
+          <div class="main-nav-container">
+            <ul class="nav-menu">
+              <li>
+                <a href="#"> Проекты </a>
+              </li>
+              <li>
+                <a href="tasks-performers-days.html">Задачи</a>
+              </li>
+              <li>
+                <a href="#"> Отчеты </a>
+              </li>
+              <li>
+                <a href="#"> Уведомления </a>
+              </li>
+            </ul>
 
-        <ul class="nav-menu">
-          <li>
-            <a href="#">
-              Организации
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Сотрудники
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Справочники
-            </a>
-          </li>
-        </ul>
-      </div>
-      <ul class="nav-submenu">
-        <li>
-          <a href="#">
-            Задачи списком
-          </a>
-        </li>
-        <li>
-          <a href="tasks-performers-days.html">
-            Диаграмма задач
-          </a>
-        </li>
-      </ul>
-      <h1>
-        Главная
-      </h1>
+            <ul class="nav-menu">
+              <li>
+                <a href="#"> Организации </a>
+              </li>
+              <li>
+                <a href="#"> Сотрудники </a>
+              </li>
+              <li>
+                <a href="#"> Справочники </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="nav-submenu">
+            <li>
+              <a href="#"> Задачи списком </a>
+            </li>
+            <li>
+              <a href="tasks-performers-days.html"> Диаграмма задач </a>
+            </li>
+          </ul>
+          <h1>Главная</h1>
+        </div>
+      </main>
     </div>
-  </main>
-</div>
-
-</body>
+  </body>
 </html>
