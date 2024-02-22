@@ -1,0 +1,86 @@
+.gant-diagram {
+  overflow-x: auto;
+
+  &__row {
+    min-width: 1500px;
+    display: flex;
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+  }
+
+  &__cell {
+    font-size: 13px;
+    &:not(:last-child) {
+      border-right: 1px dotted #868585;
+    }
+
+    padding: 5px 0;
+
+    &:first-child {
+      width: 400px;
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+      justify-content: space-between;
+    }
+  }
+
+
+  &__controller {
+    margin-bottom: 10px;
+    .gant-diagram__cell {
+      height: 45px;
+
+      &:not(:first-child) {
+        min-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &__controller-switcher {
+    display: flex;
+    outline: 1px solid #D0D5DF;
+    outline-offset: 1px;
+    border-radius: 5px;
+    background: #F6F6F6;
+    a {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      line-height: 1;
+      font-size: 13px;
+      padding: 0 15px;
+      color: #000000;
+      &._active {
+        outline: 1px solid #4E4E4E;
+        border-radius: 5px;
+        background: #ffffff;
+      }
+    }
+  }
+
+  &__trigger {
+    background: #2F65F6;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    svg:first-child {
+      margin-right: 10px;
+    }
+    span {
+      font-weight: 500;
+      margin-left: 5px;
+      margin-right: 20px;
+    }
+  }
+}

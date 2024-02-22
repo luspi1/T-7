@@ -1,0 +1,17 @@
+.tasks-projects{
+  h1 {
+    @include opensans-bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .nav-submenu {
+    margin-bottom: 35px;
+  }
+
+  &__main {
+    padding: 15px 0;
+  }
+
+
+}

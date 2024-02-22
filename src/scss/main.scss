@@ -3,7 +3,9 @@
 @import "settings";
 
 //Страницы
-@import "pages/tasks-diagram";
+@import "pages/tasks-performers-days";
+@import "pages/tasks-performers-hours";
+@import "pages/tasks-projects";
 
 //Компоненты
 @import "./components/main-menu";
@@ -12,6 +14,8 @@
 @import "./components/nav-menu";
 @import "./components/nav-submenu";
 @import "./components/main-btn";
+@import "./components/gant-diagram";
+@import "./components/gant-filtration";
 
 
 
