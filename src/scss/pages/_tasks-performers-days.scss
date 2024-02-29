@@ -1,4 +1,5 @@
 .tasks-performers-days {
+  padding-bottom: 200px;
   h1 {
     @include opensans-bold;
     font-size: 30px;
@@ -12,6 +13,4 @@
   &__main {
     padding: 15px 0;
   }
-
-
 }

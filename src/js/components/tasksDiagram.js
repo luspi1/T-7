@@ -6,4 +6,14 @@ if (gantDiagram) {
       e.target.parentNode.classList.toggle('_collapsed')
     }
   })
+
+  // определение длины трека задачи, исходя из значения в data-interval
+  const taskTracks = gantDiagram.querySelectorAll('.gant-diagram__task-track')
+
+  taskTracks?.forEach((track) => {
+    const trackInterval = Number(track.dataset.interval)
+    track.style.width = `${trackInterval * 100 - 20}px`
+  })
+
+  // определение высоты строки, исходя из максимального количества треков задач в строке
 }

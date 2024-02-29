@@ -2,44 +2,20 @@
   overflow-x: auto;
   overflow-y: hidden;
 
-  &__row {
-    min-width: 1500px;
-    display: flex;
-    border: 1px solid #5F5F5F;
-    border-radius: 5px;
-  }
-
-  &__cell {
-    font-size: 13px;
-
-    &:not(:last-child) {
-      border-right: 1px dotted #868585;
-    }
-
-    padding: 5px 0;
-
-    &:first-child {
-      width: 400px;
-      display: flex;
-      align-items: center;
-      padding: 0 8px;
-      justify-content: space-between;
-    }
-  }
-
-
   &__controller {
     margin-bottom: 10px;
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
 
-    .gant-diagram__cell {
+    .gant-diagram__row {
       height: 45px;
+    }
+    .gant-diagram__cell {
 
       &._active {
         span {
           font-weight: 700;
         }
-
-        position: relative;
 
         &::before {
           content: '';
@@ -49,8 +25,9 @@
           width: 1px;
           background-color: rgba(#FF0000, 0.9);
           transform: translateX(-50%);
-          height: 100vh;
+          height: 99999999999999px;
           opacity: 0.9;
+          z-index: 10;
         }
 
         &::after {
@@ -92,6 +69,7 @@
       font-size: 13px;
       padding: 0 15px;
       color: #000000;
+      font-weight: 600;
 
       &._active {
         outline: 1px solid #4E4E4E;
@@ -125,8 +103,10 @@
     }
   }
 
-
   &__block {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
     &._collapsed {
       .gant-diagram__trigger {
         .arrow-svg {
@@ -140,8 +120,55 @@
     }
   }
 
+  &__row {
+    height: 40px;
+    min-width: 1500px;
+    display: flex;
+
+
+    &._off-graph {
+      border-top: 1px solid #BCBCBC;
+      height: 50px;
+
+      .gant-diagram__cell {
+        font-size: 13px;
+        font-style: italic;
+      }
+    }
+
+    &:nth-last-child(2) {
+      height: 50px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1px;
+    }
+
+  }
+
+  &__cell {
+    position: relative;
+    font-size: 13px;
+
+    &:not(:last-child) {
+      border-right: 1px dotted #868585;
+    }
+
+
+    &:first-child {
+      width: 400px;
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+      justify-content: space-between;
+    }
+  }
+
   &__table {
     margin-top: 5px;
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+    overflow: hidden;
 
     .gant-diagram__cell {
       font-size: 15px;
@@ -159,6 +186,49 @@
         margin-left: 10px;
       }
     }
+  }
+
+  &__task-track {
+    position: absolute;
+    z-index: 5;
+    height: 30px;
+    top: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    padding-left: 7px;
+    @include opensans-medium;
+    left: 10px;
+
+    &[data-color="white"] {
+      background-color: #ffffff;
+      border: 1px solid #5F5F5F;
+    }
+
+    &[data-color="green"] {
+      background-color: #C4FE97;
+      border: 2px solid #079907;
+    }
+
+    &[data-color="yellow"] {
+      background-color: #FFE887;
+      border: 2px solid #C18B00;
+    }
+
+    &[data-color="red"] {
+      background-color: #FFD0D0;
+      border: 2px solid #CF0019;
+    }
+
+    .title-task {
+      line-height: 1;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
   }
 
 }
