@@ -14,4 +14,176 @@
   }
 
 
+  .gant-diagram__row-title {
+    border: 1px solid #4E4E4E;
+    display: grid;
+    grid-template-columns: 400px repeat(14, 1fr);
+  }
+
+  .gant-diagram__row {
+    border: 1px solid #4E4E4E;
+    border-radius: 3px 0px 0px 3px;
+
+    display: grid;
+    grid-template-columns: 400px repeat(14, 1fr);
+
+
+    grid-template-areas:
+      "info w1 w1 d1 d2 d3 d4 d5 w2 w2 d6 d7 d8 d9 d10"
+      "info-footer w1 w1 f1 f2 f3 f4 f5 w2 w2 f6 f7 f8 f9 f10";
+
+    position: relative;
+
+    &-lines {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+
+      display: grid;
+      grid-template-columns: 400px repeat(14, 1fr);
+
+      span {
+        display: block;
+        border-right: 1px dashed rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .info {
+      grid-area: info;
+      height: 100%;
+      padding: 12px;
+      position: relative;
+
+      a {
+        display: inline-block;
+        margin: 0 5px;
+        font-weight: 700;
+        font-size: 15px;
+        color: #2F65F6;
+      }
+
+      &-id {
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        font-style: italic;
+        font-size: 13px;
+      }
+    }
+
+    .footer {
+      grid-area: info-footer;
+      border-top: 1px solid #BCBCBC;
+      padding: 10px;
+      font-style: italic;
+      font-size: 13px;
+    }
+
+
+
+    .gant-diagram__tasks {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(auto, 1fr);
+
+      grid-row: 1 / 2;
+
+      .red-area {
+        z-index: -10;
+        background: repeating-linear-gradient(-45deg, red 0px, red 1px, transparent 1px, #FFD2D8 5px);
+      }
+
+
+    }
+
+    .grid-item {
+      border-radius: 5px;
+      font-size: 13px;
+      margin: 8px 5px 0 5px;
+
+      span {
+        padding: 0px 7px;
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+    }
+
+    .yellow-task {
+      span {
+        background-color: #FFE887;
+        border: 2px solid #C18B00;
+      }
+    }
+
+    .green-task {
+      span {
+        background-color: #C4FE97;
+        border: 2px solid #079907;
+      }
+    }
+
+    .not-finished {
+      margin-right: 0;
+
+      span {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    .continued {
+      margin-left: 0;
+
+      span {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    .gant-diagram__tasks-out-schedule {
+
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(auto, 1fr);
+
+
+      grid-row: 2/3;
+      border-top: 1px solid #BCBCBC;
+      // grid-area: f1 f2;
+    }
+
+
+    .weekends {
+      font-size: 13px;
+      padding: 8px 11px 8px 8px;
+      background: repeating-linear-gradient(-45deg, lightgray 0px, lightgray 1px, transparent 1px, transparent 5px);
+
+
+      div {
+        padding: 3px 17px 0 10px;
+        background-color: #fff;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+
+        border: 1px solid #5F5F5F;
+        border-radius: 5px;
+
+      }
+    }
+
+    .weekends1 {
+      grid-area: w1;
+    }
+
+    .weekends2 {
+      grid-area: w2;
+    }
+  }
+
 }
